@@ -1,0 +1,132 @@
+/* Basic Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #000;
+    transition: all 0.3s ease;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+header .logo {
+    font-size: 24px;
+}
+
+header nav a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+header button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #fff;
+}
+
+body.dark-mode header {
+    background-color: #1e1e1e;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.hero h1 {
+    font-size: 36px;
+}
+
+.hero p {
+    font-size: 18px;
+}
+
+/* Event Section */
+.event-list {
+    padding: 20px;
+}
+
+.event-item {
+    background-color: #f4f4f4;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.event-item h3 {
+    font-size: 24px;
+}
+
+.event-item p {
+    font-size: 16px;
+}
+
+.rsvp-btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.rsvp-btn:hover {
+    background-color: #0056b3;
+}
+
+
+/* Admin Dashboard Styles */
+.admin-dashboard {
+    padding: 20px;
+}
+
+.admin-dashboard h1 {
+    font-size: 30px;
+}
+
+.admin-dashboard .stats {
+    display: flex;
+    gap: 20px;
+}
+
+.admin-dashboard .stat-item {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+    width: 150px;
+}
+
+.admin-dashboard button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.admin-dashboard button:hover {
+    background-color: #0056b3;
+}
+
+#event-list, #user-list {
+    margin-top: 20px;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage Events</title>
+  <link rel="stylesheet" href="../../styles/manage-events.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo-section">
+          <img src="../../assets/logo.png" alt="Ella's Events Logo" class="logo">
+          <span class="title">Ella's Events</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="AdminDashboard.html">Home</a></li>
+          <li><a href="CreateEvent.html">Create Event</a></li>
+          <li><a href="calendar.html">Calendar View</a></li>
+          <li><a href="view-users.html">View Users</a></li>
+        </ul>
+        <button id="toggle-dark-mode" title="Toggle Dark Mode"><i class="fas fa-moon"></i></button>
+      </nav>
+  <main>
+    <h1>Manage Events</h1>
+    <div class="event-list">
+      <div class="event-card">
+        <h3>Event Name</h3>
+        <p>Date: <span>2024-12-15</span></p>
+        <p>Location: <span>Accra</span></p>
+        <p>Capacity: <span>100</span></p>
+        <button class="btn edit-btn">Edit</button>
+        <button class="btn delete-btn">Delete</button>
+      </div>
+      
+      <!-- Repeat event-card for other events -->
+    </div>
+  </main>
+
+  <script src="/scripts/darkMode.js"></script>
+</body>
+</html>

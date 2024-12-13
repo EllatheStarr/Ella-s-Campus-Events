@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Ella's Events</title>
+    <link rel="stylesheet" href="../../styles/register.css">
+</head>
+<body>
+    <header>
+        <div class="logo-section">
+            <img src="../../assets/logo.png" alt="Ella's Events Logo" class="logo">
+            <span class="title">Ella's Events</span>
+        </div>
+        <nav class="navbar">
+            <!-- Other navbar items can go here -->
+        </nav>
+    </header>
+
+    <main>
+        <section class="auth-form">
+            <h2>Sign Up</h2>
+            <form id="registerForm" onsubmit="event.preventDefault(); registerUser()">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+
+                <fieldset>
+                    <legend>Event Preferences</legend>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="preferences" value="workshops"> Workshops</label>
+                        <label><input type="checkbox" name="preferences" value="seminars"> Seminars</label>
+                        <label><input type="checkbox" name="preferences" value="club_activities"> Club Activities</label>
+                        <label><input type="checkbox" name="preferences" value="cultural_events"> Cultural Events</label>
+                        <label><input type="checkbox" name="preferences" value="webinars"> Webinars</label>
+                        <label><input type="checkbox" name="preferences" value="conferences"> Conferences</label>
+                        <label><input type="checkbox" name="preferences" value="parties"> Parties</label>
+                        <label><input type="checkbox" name="preferences" value="sports"> Sports</label>
+                    </div>
+                </fieldset>
+
+                <button type="submit">Register</button>
+                <p>Already have an account? <a href="login.html">Log In</a></p>
+            </form>
+        </section>
+    </main>
+
+    <script src="../../scripts/auth.js"></script>
+    <script src="../../scripts/darkMode.js"></script>
+</body>
+</html>

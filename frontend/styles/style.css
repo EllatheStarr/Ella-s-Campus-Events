@@ -1,0 +1,277 @@
+/* General Styles */
+/* General Styles for Body */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #ffffff;
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+    background-image: url('../../frontend/assets/image.png');
+    background-size: cover; /* Ensures the image covers the entire body */
+    background-position: center center; /* Keeps the center of the image focused */
+    background-attachment: fixed; /* Keeps the image in place during scrolling */
+    background-repeat: no-repeat; /* Avoids repeating the image */
+}
+
+.light-mode {
+    background-color: #f4f4f9;
+    color: #333333;
+    background-image: url('../../frontend/assets/image1.png'); /* Default image for light mode */
+}
+
+/* Dark mode background */
+.dark-mode {
+    background-image: url('../../frontend/assets/image.png'); /* Default image for dark mode */
+}
+
+/* Navbar */
+.navbar {
+    background: linear-gradient(90deg, #0a84ff, #00c853);
+    color: white;
+    padding: 1.2em 2.5em; /* Increased padding for better space */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    font-family: 'Arial', sans-serif;
+}
+
+.nav-content-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    margin-right: 10px;
+}
+
+.brand-name {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 2px;
+    font-style: italic;
+    text-transform: uppercase;
+    transition: transform 0.3s ease;
+}
+
+/* Links aligned to the right */
+.nav-links {
+    display: flex;
+    gap: 15px;
+    font-weight: 600;
+    align-items: center;
+}
+
+/* Improved Toggle Button */
+/* Adjust dark mode toggle button positioning */
+.dark-mode-toggle {
+    background-color: transparent; /* Transparent background */
+    border: none;
+    color: #ffffff; /* White text color */
+    font-size: 2rem; /* Icon size */
+    padding: 10px; /* Adjust padding for a cleaner look */
+    border-radius: 50%; /* Round button for a distinct look */
+    cursor: pointer;
+    transition: transform 2s;
+    z-index: 1100; /* Ensure it’s above other navbar content */
+    order: 99; /* Ensure it stays at the end of the navbar items */
+    margin-right: 50px; /* Move the button to the left for better visibility */
+}
+
+.dark-mode-toggle:hover {
+    transform: scale(1.2); /* Enlarged effect on hover */
+    color: #0a84ff; /* Change text color on hover (blue) */
+}
+
+/* Links Styling */
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.5em 1em;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Hero Section */
+/* For Hero Section */
+.hero-card {
+    background-image: url('/image.png'); /* Path to your image */
+    background-size: cover; /* Ensures the image covers the section area */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    color: white;
+    text-align: center;
+    padding: 3em 1.5em;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    margin-top: 4em;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* For About Section */
+.about-card {
+    background-image: url('/image.png'); /* Path to your image */
+    background-size: cover; /* Ensures the image covers the section area */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    padding: 3em;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* Similarly for other sections if needed */
+
+.hero-card h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5em;
+}
+
+.hero-card p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5em;
+}
+
+.cta-buttons button {
+    background-color: #0a84ff;
+    color: white;
+    border: none;
+    padding: 0.7em 1.5em;
+    margin: 0.5em;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.cta-buttons button:hover {
+    background-color: #0066cc;
+    transform: translateY(-3px);
+}
+
+/* Section Cards */
+.card {
+    max-width: 80%;
+    margin: 9em auto;
+    padding: 3em;
+    border-radius: 15px;
+    background: #1e1e1e;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4); /* Initial box shadow */
+    text-align: center;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease, transform 0.6s ease, background-color 0.3s, color 0.3s, box-shadow 0.3s ease;
+    margin-bottom: 2em;
+}
+
+.light-mode .card {
+    background: #ffffff;
+    color: #333333;
+}
+
+/* Hover effect for Section Cards */
+.card:hover {
+    transform: translateY(-5px) scale(1.05); /* Slightly grow the card */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+/* Feature Cards */
+.feature-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    justify-content: center;
+}
+
+.feature-card {
+    background-color: #333333;
+    color: white;
+    padding: 2em;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4); /* Initial box shadow */
+    text-align: center;
+    max-width: 300px;
+    flex: 1 1 calc(33.333% - 2em); /* Three cards per row */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateY(50px);
+    margin-bottom: 2em;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px) scale(1.05); /* Slightly grow the card */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.feature-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1em;
+}
+
+.feature-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.feature-card i {
+    font-size: 2rem;
+    margin-bottom: 1em;
+    color: #0a84ff; /* Icon color */
+}
+
+/* Hover Effect for Cards */
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Scroll Animation */
+.feature-card {
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 1em;
+    background: #0a84ff;
+    color: white;
+    margin-top: 4em;
+}
+
+.light-mode .footer {
+    background: #4caf50;
+}
+
+/* Scroll Animation */
+.card.visible {
+    opacity: 1;
+    transform: translateY(0);
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

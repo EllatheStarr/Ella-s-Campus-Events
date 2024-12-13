@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Dashboard</title>
+  <link rel="stylesheet" href="../../styles/AdminDashboard.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo-section">
+      <img src="../../assets/logo.png" alt="Ella's Events Logo" class="logo">
+      <span class="title">Ella's Events</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="rsvp-summary.html">RSVP Summary</a></li>
+      <li><a href="calendar.html">Event Calendar</a></li>
+      <li><a href="editPreferences">Edit Preferences</a></li>
+      <li><a href="login.html">Logout</a></li>
+    </ul>
+    <button id="toggle-dark-mode" title="Toggle Dark Mode"><i class="fas fa-moon"></i></button>
+  </nav>
+  
+  <!-- Dashboard Content -->
+  <main class="dashboard">
+    <h1>Welcome, User!</h1>
+    
+    <!-- Dashboard Cards for Event Management -->
+    <div class="card-container">
+      <!-- Event Listings & RSVP -->
+     <!-- RSVP Summary Card -->
+    <div class="card">
+      <i class="fas fa-check-circle"></i>
+      <h3>Your RSVPs</h3>
+      <p>You have RSVP'd to <span id="rsvp-count">0</span> events.</p>
+      <a href="rsvp-summary.html" class="btn">View Details</a>
+    </div>
+
+
+      <!-- Event Calendar View -->
+      <div class="card">
+        <i class="fas fa-calendar-alt"></i>
+        <h3>Event Calendar</h3>
+        <p>View events on a calendar and filter by preferences.</p>
+        <a href="userCalendar.html" class="btn">Go to Calendar</a>
+      </div>
+
+      <!-- Edit Preferences -->
+      <div class="card">
+        <i class="fas fa-cogs"></i>
+        <h3>Edit Preferences</h3>
+        <p>Set your event preferences like favorite types and notifications.</p>
+        <a href="editPreferences.html" class="btn">Go to Page</a>
+      </div>
+    </div>
+  </main>
+
+  <script src="../../scripts/darkMode.js"></script>
+</body>
+</html>

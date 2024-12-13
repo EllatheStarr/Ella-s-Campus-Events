@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Ella's Events</title>
+    <link rel="stylesheet" href="styles/global.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Ella's Events</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="events.html">Events</a>
+            <a href="login.html">Login/Sign Up</a>
+            <a href="calendar.html">Calendar</a>
+            <a href="about.html">About</a>
+        </nav>
+        <button id="darkModeToggle" onclick="toggleDarkMode()">🌙</button>
+    </header>
+
+    <main>
+        <section class="profile">
+            <h2>Your Profile</h2>
+            <p>Name: <span id="userName">John Doe</span></p>
+            <p>Email: <span id="userEmail">john@example.com</span></p>
+            <p>Event Preferences: <span id="userPreferences">Workshops, Seminars</span></p>
+            <h3>RSVP'd Events</h3>
+            <ul id="rsvpedEvents">
+                <!-- Dynamically populated RSVP'd events list -->
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>Contact us: support@ellas.events</p>
+    </footer>
+
+    <script src="scripts/profile.js"></script>
+    <script src="scripts/dark-mode.js"></script>
+</body>
+</html>

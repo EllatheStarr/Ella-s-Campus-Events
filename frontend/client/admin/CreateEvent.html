@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Event</title>
+  <link rel="stylesheet" href="../../styles/create-events.css">
+</head>
+<body>
+  <header>
+    <h1>Create Event</h1>
+    <a href="AdminDashboard.html">Back to Dashboard</a>
+  </header>
+  <form id="event-form">
+    <label for="event-name">Event Name</label>
+    <input type="text" id="event-name" placeholder="Enter event name" required>
+
+    <label for="event-date">Event Date</label>
+    <input type="date" id="event-date" required>
+
+    <label for="event-time">Event Time</label>
+    <input type="time" id="event-time" required>
+
+    <label for="event-location">Location</label>
+    <input type="text" id="event-location" placeholder="Enter location" required>
+
+    <label for="event-description">Description</label>
+    <textarea id="event-description" rows="4" placeholder="Enter event description" required></textarea>
+
+    <label for="event-capacity">Capacity</label>
+    <input type="number" id="event-capacity" placeholder="Enter capacity" required>
+
+    <!-- New Category Selection -->
+    <label for="event-category">Category</label>
+    <select id="event-category" required>
+      <option value="" disabled selected>Select a category</option>
+      <option value="workshop">Workshop</option>
+      <option value="seminar">Seminar</option>
+      <option value="club_activity">Club Activity</option>
+      <option value="cultural_event">Cultural Event</option>
+      <option value="webinar">Webinar</option>
+      <option value="conference">Conference</option>
+      <option value="party">Party</option>
+      <option value="sports">Sports</option>
+    </select>
+
+    <button type="submit"><i class="fas fa-check-circle"></i> Create Event</button>
+  </form>
+</body>
+</html>

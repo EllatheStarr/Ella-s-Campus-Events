@@ -1,0 +1,193 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background: #2c3e50;
+    color: white;
+    padding: 1em 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.title {
+    font-size: 1.5rem; /* Increase the font size as needed */
+    white-space: nowrap; /* Prevents text from wrapping to the next line */
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+
+#darkModeToggle {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+#darkModeToggle:hover {
+    transform: scale(1.2);
+}
+
+/* Main Content */
+main {
+    margin-top: 6em; /* Adjusted for the fixed header */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 6em);
+    padding: 1em;
+}
+
+.auth-form {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 2em;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+.auth-form h2 {
+    margin-bottom: 1.5em;
+    font-size: 1.8rem;
+    color: #0a84ff;
+}
+
+.auth-form label {
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.auth-form input,
+.auth-form select,
+.auth-form button {
+    width: 100%;
+    padding: 0.7em;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Multi-Select Dropdown */
+select[multiple] {
+    height: auto;
+    min-height: 100px; /* Adjust based on the number of options */
+    overflow-y: auto;
+    background: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 0.5em;
+    color: #333;
+}
+
+select[multiple] option {
+    padding: 0.3em 0.5em;
+    background: #ffffff;
+    border-bottom: 1px solid #eaeaea;
+}
+
+select[multiple] option:hover {
+    background: #f0f8ff;
+}
+
+.auth-form button {
+    background: #2c3e50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.auth-form button:hover {
+    background: #0066cc;
+    transform: translateY(-3px);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1em;
+    background: #2c3e50;
+    color: white;
+    margin-top: 2em;
+    position: relative;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-mode header {
+    background: #1e1e1e;
+    color: #ffffff;
+}
+
+body.dark-mode .auth-form {
+    background: #1e1e1e;
+    color: #ffffff;
+}
+
+body.dark-mode input,
+body.dark-mode select {
+    background: #333333;
+    color: #ffffff;
+    border: 1px solid #444444;
+}
+
+body.dark-mode input:focus,
+body.dark-mode select:focus {
+    border-color: #0a84ff;
+    box-shadow: 0 0 4px rgba(10, 132, 255, 0.5);
+}
+
+body.dark-mode button {
+    background: #2c3e50;
+    color: white;
+}
+
+body.dark-mode button:hover {
+    background: #0066cc;
+}
+
+body.dark-mode footer {
+    background: #1e1e1e;
+    color: #ffffff;
+}

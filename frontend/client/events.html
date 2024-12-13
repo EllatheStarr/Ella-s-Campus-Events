@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - Ella's Events</title>
+    <link rel="stylesheet" href="/styles/global.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Ella's Events</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="events.html">Events</a>
+            <a href="login.html">Login/Sign Up</a>
+            <a href="calendar.html">Calendar</a>
+            <a href="about.html">About</a>
+        </nav>
+        <button id="darkModeToggle" onclick="toggleDarkMode()">🌙</button>
+    </header>
+
+    <main>
+        <section class="event-list">
+            <h2>Upcoming Events</h2>
+            <!-- Example Event Listing -->
+            <div class="event-item">
+                <h3>Workshop on JavaScript</h3>
+                <p>Date: 15th December 2024</p>
+                <p>Time: 10:00 AM - 1:00 PM</p>
+                <p>Location: Room 202, Building A</p>
+                <p>Available Seats: <span class="available-seats">50</span></p>
+                <p><button class="rsvp-btn" onclick="rsvpEvent(1)">RSVP</button></p>
+            </div>
+            <!-- More events will be dynamically loaded here -->
+        </section>
+    </main>
+
+    <footer>
+        <p>Contact us: support@ellas.events</p>
+    </footer>
+    <script src="/scripts/darkMode.js"></script>    
+    <script src="/scripts/events.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Calendar & Listings</title>
+  <link rel="stylesheet" href="../../styles/calendar.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo-section">
+      <img src="../../assets/logo.png" alt="Ella's Events Logo" class="logo">
+      <span class="title">Ella's Events</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="userDashboard.html">Dashboard</a></li>
+      <li><a href="view-events.html">View Events</a></li>
+    </ul>
+  </nav>
+
+  <!-- Event Calendar & Listings -->
+  <main class="event-calendar-listings">
+    <h1>Upcoming Events</h1>
+
+    <!-- Calendar Section -->
+    <div class="calendar-container">
+      <div class="calendar">
+        <div class="month">
+          <button class="prev-month">&#8249;</button>
+          <span id="month-name">December 2024</span>
+          <button class="next-month">&#8250;</button>
+        </div>
+        
+        <div class="weekdays">
+          <div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div>
+        </div>
+        
+        <div class="days" id="calendar-days"></div>
+      </div>
+    </div>
+
+    <!-- Event Listings Section -->
+    <!-- Event Listings Section -->
+<div class="events-listings">
+    <h2>Events for <span id="selected-date">Select a date</span></h2>
+    <div class="no-events-message" id="no-events-message">
+      <p>No events to show for this day.</p>
+    </div>
+  
+    <!-- Table to List Events -->
+    <table class="events-table">
+      <thead>
+        <tr>
+          <th>Event Name</th>
+          <th>Date</th>
+          <th>Location</th>
+          <th>Capacity</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="events-table-body">
+        <!-- Rows will be dynamically added here -->
+      </tbody>
+    </table>
+  </div>
+  
+  </main>
+
+  <script src="../../scripts/calendar.js"></script>
+  <script src="../../scripts/events.js"></script>
+</body>
+</html>

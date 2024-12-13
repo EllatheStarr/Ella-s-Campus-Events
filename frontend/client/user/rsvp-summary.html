@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RSVP Summary</title>
+  <link rel="stylesheet" href="../../styles/AdminDashboard.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo-section">
+      <img src="../../assets/logo.png" alt="Ella's Events Logo" class="logo">
+      <span class="title">Ella's Events</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="event-calendar.html">Event Calendar</a></li>
+      <li><a href="edit-preferences.html">Edit Preferences</a></li>
+      <li><a href="user-dashboard.html">Dashboard</a></li>
+    </ul>
+    <button id="toggle-dark-mode" title="Toggle Dark Mode"><i class="fas fa-moon"></i></button>
+  </nav>
+
+  <!-- RSVP Summary Content -->
+  <main class="rsvp-summary">
+    <h1>Your RSVPs</h1>
+
+    <div class="rsvp-item">
+        <div class="event-details">
+          <h3>Event Title 1</h3>
+          <p><strong>Date:</strong> January 15, 2025</p>
+          <p><strong>Time:</strong> 6:00 PM</p>
+        </div>
+        <!-- Remove the rsvp-actions section entirely -->
+      </div>
+      
+      <div class="rsvp-item">
+        <div class="event-details">
+          <h3>Event Title 2</h3>
+          <p><strong>Date:</strong> February 20, 2025</p>
+          <p><strong>Time:</strong> 9:00 AM</p>
+        </div>
+        <!-- Remove the rsvp-actions section entirely -->
+      </div>
+      
+
+    <a href="userDashboard.html" class="btn back-btn">Back to Dashboard</a>
+  </main>
+
+  <script src="../../scripts/rsvp.js"></script>
+  <script src="../../scripts/darkMode.js"></script>
+</body>
+</html>

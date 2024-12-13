@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>List of Events</title>
+  <link rel="stylesheet" href="../../styles/AdminDashboard.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo-section">
+      <img src="../../assets/logo.png" alt="Ella's Events Logo" class="logo">
+      <span class="title">Ella's Events</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="create-event.html">Create Event</a></li>
+      <li><a href="manage-events.html">Manage Events</a></li>
+      <li><a href="calendar.html">Calendar View</a></li>
+      <li><a href="view-users.html">View Users</a></li>
+      <li><a href="list-events.html">List of Events</a></li>
+    </ul>
+    <button id="toggle-dark-mode" title="Toggle Dark Mode"><i class="fas fa-moon"></i></button>
+  </nav>
+  
+  <!-- List of Events Section -->
+  <main class="events-list">
+    <h1>All Events</h1>
+
+    <!-- Table to List Events -->
+    <table class="events-table">
+      <thead>
+        <tr>
+          <th>Event Name</th>
+          <th>Date</th>
+          <th>Location</th>
+          <th>Capacity</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Example Event Row -->
+        <tr>
+          <td>Web Development Workshop</td>
+          <td>2024-12-15</td>
+          <td>Online</td>
+          <td>100</td>
+          <td>
+            <a href="view-event.html" class="btn">View</a>
+            <a href="edit-event.html" class="btn">Edit</a>
+            <a href="delete-event.html" class="btn">Delete</a>
+          </td>
+        </tr>
+        <!-- Additional Event Rows can be added dynamically -->
+      </tbody>
+    </table>
+  </main>
+
+  <script src="js/main.js"></script>
+  <script src="js/dark-mode.js"></script>
+</body>
+</html>

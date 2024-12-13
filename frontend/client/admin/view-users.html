@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>View Users</title>
+  <link rel="stylesheet" href="../../styles/view-users.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo-section">
+      <img src="../../assets/logo.png" alt="Ella's Events Logo" class="logo">
+      <span class="title">Ella's Events</span>
+    </div>
+    <ul class="nav-links">
+        <li><a href="AdminDashboard.html">Home</a></li>
+      <li><a href="CreateEvent.html">Create Event</a></li>
+      <li><a href="manage-events.html">Manage Events</a></li>
+      <li><a href="calendar.html">Calendar View</a></li>
+    </ul>
+    <button id="toggle-dark-mode" title="Toggle Dark Mode"><i class="fas fa-moon"></i></button>
+  </nav>
+
+  <main>
+    <h1>Registered Users</h1>
+    <table class="user-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>John Doe</td>
+          <td>johndoe@example.com</td>
+          <td>
+            <button class="btn view-btn">View</button>
+            <button class="btn delete-btn">Delete</button>
+          </td>
+        </tr>
+        <!-- Repeat for other users -->
+      </tbody>
+    </table>
+  </main>
+
+  <script src="../../scripts/darkMode.js"></script>
+</body>
+</html>

@@ -1,0 +1,189 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #1e3a8a;
+    color: white;
+  }
+  
+  .navbar .logo-section {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar .logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  .navbar .title {
+    font-size: 1.5rem;
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+  }
+  
+  .nav-links li {
+    margin-right: 20px;
+  }
+  
+  .nav-links a {
+    color: white;
+    font-size: 1.1rem;
+  }
+  
+  #toggle-dark-mode {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1.5rem;
+  }
+  
+  .event-calendar-listings {
+    padding: 40px;
+    text-align: center;
+  }
+  
+  .calendar-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .calendar {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+  }
+  
+  .month {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .weekdays {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .weekdays div {
+    font-weight: bold;
+  }
+  
+  .days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 10px;
+  }
+  
+  .day {
+    padding: 15px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .day:hover {
+    background-color: #ddd;
+  }
+  
+  .event-card {
+    background-color: white;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .event-card h3 {
+    margin-bottom: 10px;
+  }
+  
+  .event-card p {
+    margin-bottom: 10px;
+  }
+  
+  .rsvp-btn {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .rsvp-btn:hover {
+    background-color: #45a049;
+  }
+  
+  .no-events-message {
+    font-size: 1.2rem;
+    color: #777;
+  }
+  
+
+  /* Table Styles */
+.events-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1rem;
+    text-align: left;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .events-table th,
+  .events-table td {
+    padding: 15px;
+    border: 1px solid #ddd;
+  }
+  
+  .events-table th {
+    background-color: #1e3a8a;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .events-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .events-table tr:hover {
+    background-color: #ddd;
+  }
+  
+  .btn {
+    text-decoration: none;
+    color: white;
+    background-color: #007BFF;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+  .btn:hover {
+    background-color: #0056b3;
+  }
+  

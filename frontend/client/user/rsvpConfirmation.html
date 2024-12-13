@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RSVP Confirmation</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    /* Additional styles for confirmation page */
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+
+    .confirmation-container {
+      background-color: #ffffff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      text-align: center;
+      padding: 40px;
+      max-width: 400px;
+      margin: 100px auto;
+      transition: all 0.3s ease;
+    }
+
+    .confirmation-container h1 {
+      font-size: 2.5rem;
+      color: #17a085;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+    .confirmation-container p {
+      font-size: 1.2rem;
+      color: #333;
+      margin-bottom: 30px;
+      line-height: 1.5;
+    }
+
+    .btn {
+      background-color: #17a085;
+      color: white;
+      padding: 12px 25px;
+      text-decoration: none;
+      border-radius: 30px;
+      font-size: 1.1rem;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #45a049;
+    }
+
+    .back-btn {
+      background-color: #f44336;
+      margin-top: 15px;
+    }
+
+    .back-btn:hover {
+      background-color: #e53935;
+    }
+
+    /* Add subtle hover effect for the confirmation card */
+    .confirmation-container:hover {
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      transform: translateY(-10px);
+    }
+
+    /* Add some spacing for the page */
+    body {
+      padding: 0 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- RSVP Confirmation -->
+  <main class="confirmation-container">
+    <h1>RSVP Successful!</h1>
+    <p>Thank you for confirming your RSVP. You have successfully signed up for the event.</p>
+    <a href="userDashboard.html" class="btn">Back to Dashboard</a>
+    <a href="userCalendar.html" class="btn">Back to Calendar</a>
+  </main>
+
+  <script src="/scripts/darkMode.js"></script>
+</body>
+</html>

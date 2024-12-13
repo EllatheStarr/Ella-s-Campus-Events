@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="../../styles/AdminDashboard.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo-section">
+      <img src="../../assets/logo.png" alt="Ella's Events Logo" class="logo">
+      <span class="title">Ella's Events</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="AdminDashboard.html">Create Event</a></li>
+      <li><a href="manage-events.html">Manage Events</a></li>
+      <li><a href="calendar.html">Calendar View</a></li>
+      <li><a href="view-users.html">View Users</a></li>
+      <li><a href="analytics.html">View Analytics</a></li>
+      <li><a href="../auth/logout.html">Logout</a></li>
+    </ul>
+    <button id="toggle-dark-mode" title="Toggle Dark Mode"><i class="fas fa-moon"></i></button>
+  </nav>
+  
+  <!-- Dashboard Content -->
+  <main class="dashboard">
+    <h1>Welcome, Admin!</h1>
+    
+    <!-- Dashboard Cards for Event Management -->
+    <div class="card-container">
+      <div class="card">
+        <i class="fas fa-plus-circle"></i>
+        <h3>Create Event</h3>
+        <p>Add new events with details like name, date, location, and capacity.</p>
+        <a href="CreateEvent.html" class="btn">Go to Page</a>
+      </div>
+      <div class="card">
+        <i class="fas fa-edit"></i>
+        <h3>Manage Events</h3>
+        <p>Edit or delete existing events and update their details.</p>
+        <a href="manage-events.html" class="btn">Go to Page</a>
+      </div>
+      <div class="card">
+        <i class="fas fa-calendar-alt"></i>
+        <h3>Calendar View</h3>
+        <p>View all events on a calendar.</p>
+        <a href="calendar.html" class="btn">Go to Page</a>
+      </div>
+      <div class="card">
+        <i class="fas fa-users"></i>
+        <h3>View Users</h3>
+        <p>View and manage registered users in the system.</p>
+        <a href="view-users.html" class="btn">Go to Page</a>
+      </div>
+      <!-- New Analytics Card -->
+      <div class="card">
+        <i class="fas fa-chart-line"></i>
+        <h3>View Analytics</h3>
+        <p>See detailed analytics like most attended workshops, user preferences, etc.</p>
+        <a href="analytics.html" class="btn">Go to Analytics</a>
+      </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="../../scripts/calendar.js"></script>
+  <script src="../../scripts/darkMode.js"></script>
+  <script src="../../scripts/events.js"></script>
+</body>
+</html>

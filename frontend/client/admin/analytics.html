@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analytics - Ella's Events</title>
+  <link rel="stylesheet" href="../../styles/analytics.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo-section">
+      <img src="../../assets/logo.png" alt="Ella's Events Logo" class="logo">
+      <span class="title">Ella's Events</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="CreateEvent.html">Create Event</a></li>
+      <li><a href="manage-events.html">Manage Events</a></li>
+      <li><a href="calendar.html">Calendar View</a></li>
+      <li><a href="view-users.html">View Users</a></li>
+      <li><a href="AdminDashboard.html">Dashboard</a></li>
+    </ul>
+    <button id="toggle-dark-mode" title="Toggle Dark Mode"><i class="fas fa-moon"></i></button>
+  </nav>
+  
+  <!-- Analytics Content -->
+  <main class="analytics">
+    <h1>Event Analytics</h1>
+    
+    <div class="analytics-card-container">
+      <!-- Most Attended Workshops Card -->
+      <div class="analytics-card">
+        <i class="fas fa-users"></i>
+        <h3>Most Attended Workshops</h3>
+        <ul>
+          <li>Workshop 1 - 200 attendees</li>
+          <li>Workshop 2 - 180 attendees</li>
+          <li>Workshop 3 - 150 attendees</li>
+        </ul>
+      </div>
+
+      <!-- Highest User Preferences Card -->
+      <div class="analytics-card">
+        <i class="fas fa-chart-bar"></i>
+        <h3>Highest User Preferences</h3>
+        <ul>
+          <li>Conference - 75%</li>
+          <li>Workshop - 60%</li>
+          <li>Seminar - 40%</li>
+        </ul>
+      </div>
+
+      <!-- Upcoming Events Card -->
+      <div class="analytics-card">
+        <i class="fas fa-calendar-day"></i>
+        <h3>Upcoming Events</h3>
+        <ul>
+          <li>Event 1 - 10th December</li>
+          <li>Event 2 - 15th December</li>
+          <li>Event 3 - 20th December</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+ 
+  <script src="../../scripts/darkMode.js"></script>
+</body>
+</html>

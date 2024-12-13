@@ -1,0 +1,176 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+  }
+  
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #2c3e50;
+    padding: 1rem 2rem;
+    color: white;
+  }
+  
+  .navbar .logo {
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  .navbar .title {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+  
+
+  /* calendar.css */
+#calendar {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .fc-daygrid-day {
+    background-color: #f4f4f9;
+  }
+  
+  .fc-daygrid-day:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .fc-toolbar {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .fc .fc-toolbar-title {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .rsvp-btn {
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .rsvp-btn:hover {
+    background-color: #45a049;
+  }
+
+  /* Updated Styles for the Calendar */
+.calendar-container {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .calendar {
+    padding: 20px;
+  }
+  
+  .month {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .weekdays, .days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+  }
+  
+  .weekdays div, .days div {
+    text-align: center;
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+  
+  .weekdays div {
+    font-weight: bold;
+  }
+  
+  .days .day {
+    background-color: #f4f4f9;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .days .day:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .day.selected {
+    background-color: #1abc9c;
+    color: white;
+  }
+  
+
+  .events-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1rem;
+    text-align: left;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .events-table th,
+  .events-table td {
+    padding: 15px;
+    border: 1px solid #ddd;
+  }
+  
+  .events-table th {
+    background-color: #2c3e50;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .events-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .events-table tr:hover {
+    background-color: #ddd;
+  }
+  
+  .btn {
+    text-decoration: none;
+    color: white;
+    background-color: #007BFF;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+  .btn:hover {
+    background-color: #0056b3;
+  }
