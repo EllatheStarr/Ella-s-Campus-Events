@@ -26,7 +26,7 @@ app.use('/rsvps', require('./routes/RSVPRoute'));
 
 // Root route
 app.get('/', (req, res) => {
-  res.sendFile(path.join(publicDir, 'index.html'));
+  res.sendFile(path.join(publicDir,'client', 'index.html'));
 });
 
 // Unauthorized route
