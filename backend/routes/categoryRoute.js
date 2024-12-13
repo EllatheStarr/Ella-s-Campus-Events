@@ -1,24 +1,21 @@
 const express = require('express');
-const eventController = require('../controllers/eventController');
+const categoryController = require('../controllers/categoryController');
 
 const router = express.Router();
 
-// Create a new event
-router.post('/', eventController.createEvent);
+// Get all categories
+router.get('/', categoryController.getAllCategories);
 
-// Get all events
-router.get('/', eventController.getAllEvents);
+// Get a single category by ID
+router.get('/:id', categoryController.getCategoryById);
 
-// Get a single event by ID
-router.get('/:id', eventController.getEventById);
+// Create a new category
+router.post('/', categoryController.createCategory);
 
-// Update an event
-router.put('/:id', eventController.updateEvent);
+// Update an existing category
+router.put('/:id', categoryController.updateCategory);
 
-// Delete an event
-router.delete('/:id', eventController.deleteEvent);
-
-// Update individual fields
-router.patch('/:id/:field', eventController.updateEventField);
+// Delete a category
+router.delete('/:id', categoryController.deleteCategory);
 
 module.exports = router;
