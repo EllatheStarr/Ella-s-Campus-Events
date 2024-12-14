@@ -35,12 +35,13 @@ document.addEventListener('DOMContentLoaded', () => {
   
         // Store the user object in localStorage
         localStorage.setItem('user', JSON.stringify(user.user));
+        console.log('User logged in:', user);
   
         // Redirect user based on their role
-        if (user.role === 'admin') {
-          window.location.href = '../admin/AdminDashboard.html'; // Admin dashboard
+        if (user.user.role === 'admin') {
+          window.location.href = '../admin/AdminDashboard.html'; 
         } else {
-          window.location.href = '../user/userDashboard.html'; // User dashboard
+          window.location.href = '../user/userDashboard.html';
         }
       } catch (error) {
         // Display error message

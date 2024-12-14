@@ -1,16 +1,26 @@
-// calendar.js
-
 const calendarDays = document.getElementById('calendar-days');
 const monthName = document.getElementById('month-name');
 const selectedDateDisplay = document.getElementById('selected-date');
 const noEventsMessage = document.getElementById('no-events-message');
-const eventsContainer = document.getElementById('events-container');
+const eventsTableBody = document.getElementById('events-table-body');
 
-// Initialize current date
+// Initialize current date and events
 let currentDate = new Date();
-let selectedDate = null;
+let events = [];
 
-// Function to generate calendar
+// Fetch events from the backend
+async function fetchEventsFromAPI() {
+  try {
+    const response = await fetch('/events'); // API endpoint for fetching events
+    if (!response.ok) throw new Error('Failed to fetch events');
+    events = await response.json();
+    generateCalendar(); // Generate calendar with event data
+  } catch (error) {
+    console.error('Error fetching events:', error);
+  }
+}
+
+// Generate calendar
 function generateCalendar() {
   const year = currentDate.getFullYear();
   const month = currentDate.getMonth();
@@ -24,7 +34,7 @@ function generateCalendar() {
   const totalDays = lastDayOfMonth.getDate();
   const startingDay = firstDayOfMonth.getDay();
 
-  // Clear current calendar days
+  // Clear calendar days
   calendarDays.innerHTML = '';
 
   // Generate empty days for the start of the month
@@ -33,23 +43,68 @@ function generateCalendar() {
     calendarDays.appendChild(emptyDay);
   }
 
-  // Generate the calendar days
+  // Generate calendar days
   for (let i = 1; i <= totalDays; i++) {
     const dayDiv = document.createElement('div');
     dayDiv.classList.add('day');
     dayDiv.innerText = i;
 
+    const currentDate = new Date(year, month, i);
+    const currentDateString = currentDate.toISOString().split('T')[0]; // Format: YYYY-MM-DD
+
+    // Check if there are events for this day
+    const eventsForDay = events.filter(event => event.date.startsWith(currentDateString));
+    if (eventsForDay.length > 0) {
+      dayDiv.classList.add('has-events'); // Highlight the day with events
+
+      // Add dot marker for events
+      const dotMarker = document.createElement('div');
+      dotMarker.classList.add('event-marker');
+      dayDiv.appendChild(dotMarker);
+    }
+
+    // Add click listener to populate events for the selected day
     dayDiv.addEventListener('click', () => {
-      selectedDate = new Date(year, month, i);
-      selectedDateDisplay.innerText = selectedDate.toDateString();
-      fetchEvents(selectedDate); // Fetch events for the selected date
+      selectedDateDisplay.innerText = currentDate.toDateString();
+      populateEventsTable(eventsForDay); // Populate table with events for the selected day
     });
 
     calendarDays.appendChild(dayDiv);
   }
 }
 
-// Function to change month (previous/next)
+// Populate events table for a specific date
+function populateEventsTable(eventsForDay) {
+  // Clear previous rows
+  eventsTableBody.innerHTML = '';
+
+  if (eventsForDay.length === 0) {
+    noEventsMessage.style.display = 'block'; // Show "no events" message
+    return;
+  }
+
+  noEventsMessage.style.display = 'none'; // Hide "no events" message
+
+  eventsForDay.forEach(event => {
+    const row = document.createElement('tr');
+
+    // Create table cells for each event property
+    row.innerHTML = `
+      <td>${event.name}</td>
+      <td>${new Date(event.date).toDateString()}</td>
+      <td>${event.location}</td>
+      <td>${event.available_seats}</td>
+      <td>
+        <button class="view-btn" data-id="${event._id}">View</button>
+        <button class="edit-btn" data-id="${event._id}">Edit</button>
+      </td>
+    `;
+
+    eventsTableBody.appendChild(row);
+  });
+}
+
+// Change month handlers
 document.querySelector('.prev-month').addEventListener('click', () => {
   currentDate.setMonth(currentDate.getMonth() - 1);
   generateCalendar();
@@ -60,6 +115,5 @@ document.querySelector('.next-month').addEventListener('click', () => {
   generateCalendar();
 });
 
-// Load the calendar on page load
-generateCalendar();
-
+// Initial load
+fetchEventsFromAPI();

@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', async () => {
     // Retrieve user object from local storage
     const user = JSON.parse(localStorage.getItem('user'));
+    console.log('User object:', user);
 
     if (user && user.name) {
         // Set the span's value to the user's name

@@ -174,3 +174,27 @@ body {
   .btn:hover {
     background-color: #0056b3;
   }
+  /* Style for days with events */
+.day.has-events {
+  position: relative; /* To position the dot marker */
+  background-color: #f4f4f9; /* Matches the general day background */
+  color: #333;
+  cursor: pointer;
+  border-radius: 4px; /* Matches the general day styles */
+}
+
+.day.has-events:hover {
+  background-color: #e0e0e0; /* Matches hover effect of days */
+}
+
+/* Dot marker for days with events */
+.day.has-events .event-marker {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 6px;
+  background-color: #1abc9c; /* Marker color matching theme */
+  border-radius: 50%;
+}

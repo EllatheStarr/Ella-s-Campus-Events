@@ -13,12 +13,12 @@ router.get('/', eventController.getAllEvents);
 router.get('/:id', eventController.getEventById);
 
 // Update an event
-router.put('/events/:id', eventController.updateEvent);
+router.put('/:id', eventController.updateEvent);
 
 // Delete an event
-router.delete('/events/:id', eventController.deleteEvent);
+router.delete('/:id', eventController.deleteEvent);
 
 // Update individual fields
-router.patch('/events/:id/:field', eventController.updateEventField);
+router.patch('/:id/:field', eventController.updateEventField);
 
 module.exports = router;
