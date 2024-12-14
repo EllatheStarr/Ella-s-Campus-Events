@@ -112,7 +112,7 @@ Clone the repository:
 
 API Testing
 Postman Screenshot
-Kindly check the screnshots folder
+Kindly check "API screenshots" in the backend folder
 
 
 
