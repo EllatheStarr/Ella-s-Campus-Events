@@ -1,5 +1,5 @@
-const RSVP = require('../models/RSVPModel.js');
-const Event = require('../models/EventModel.js');
+const RSVP = require('../models/RSVPmodel.js');
+const Event = require('../models/eventModel.js');
 const User = require('../models/userModel.js');
 const { cp } = require('fs');
 
