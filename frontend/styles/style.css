@@ -8,7 +8,7 @@ body {
     color: #ffffff;
     line-height: 1.6;
     transition: background-color 0.3s, color 0.3s;
-    background-image: url('../../frontend/assets/image.png');
+    background-image: url('../assets/image.png');
     background-size: cover; /* Ensures the image covers the entire body */
     background-position: center center; /* Keeps the center of the image focused */
     background-attachment: fixed; /* Keeps the image in place during scrolling */
@@ -18,12 +18,12 @@ body {
 .light-mode {
     background-color: #f4f4f9;
     color: #333333;
-    background-image: url('../../frontend/assets/image1.png'); /* Default image for light mode */
+    background-image: url('../assets/image1.png'); /* Default image for light mode */
 }
 
 /* Dark mode background */
 .dark-mode {
-    background-image: url('../../frontend/assets/image.png'); /* Default image for dark mode */
+    background-image: url('../assets/image.png'); /* Default image for dark mode */
 }
 
 /* Navbar */

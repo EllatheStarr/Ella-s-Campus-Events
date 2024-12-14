@@ -41,7 +41,7 @@ async function fetchAndDisplayRsvps() {
       eventDetails.classList.add('event-details');
 
       const eventTitle = document.createElement('h3');
-      eventTitle.textContent = rsvp.event.title; // Assuming event object exists in RSVP
+      eventTitle.textContent = rsvp.event.name; 
 
       const eventDate = document.createElement('p');
       eventDate.innerHTML = `<strong>Date:</strong> ${new Date(rsvp.event.date).toLocaleDateString()}`;
