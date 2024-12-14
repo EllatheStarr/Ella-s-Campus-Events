@@ -90,3 +90,14 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Fetch categories and initialize form
     await fetchCategories();
 });
+
+document.addEventListener('DOMContentLoaded', async () => {
+    // Retrieve user object from local storage
+    const user = JSON.parse(localStorage.getItem('user'));
+  
+    if (user) {
+      // Add code here if needed
+      } else {
+        window.location.href = '../index.html'; 
+      }
+    });
