@@ -26,12 +26,12 @@ app.use('/rsvps', require('./routes/RSVPRoute'));
 
 // Root route
 app.get('/', (req, res) => {
-  res.sendFile(path.join(publicDir,'client', 'index.html'));
+  res.sendFile(path.join(publicDir,'..','frontend','client', 'index.html'));
 });
 
 // Unauthorized route
 app.get('/unauthorized', (req, res) => {
-  res.sendFile(path.join(publicDir, 'pages', 'unauthorizedPage.html'));
+  res.sendFile(path.join(publicDir,'..','frontend', 'client', 'unauthorizedPage.html'));
 });
 
 // 404 fallback
@@ -40,7 +40,6 @@ app.use((req, res) => {
   res.status(404).send('Page not found');
 });
 
-// Start the server
 app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
+  console.log(`Server is running on port http://localhost:${port}`);
 });
