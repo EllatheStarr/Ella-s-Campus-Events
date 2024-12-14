@@ -3,33 +3,42 @@ const Event = require('../models/EventModel.js');
 const User = require('../models/userModel.js');
 const { cp } = require('fs');
 
-// Create a new RSVP
 const createRSVP = async (req, res) => {
     try {
         const { user, event } = req.body;
-        console.log(user);
 
-        // Check if the user and event exist
+        // Find the user and event
         const userObj = await User.findById(user);
         const eventObj = await Event.findById(event);
-        console.log(userObj);
 
         if (!userObj) {
             return res.status(404).json({ message: 'User not found' });
         }
 
-        if ( !eventObj) {
+        if (!eventObj) {
             return res.status(404).json({ message: 'Event not found' });
         }
 
+        // Check if the user has already RSVPed for the event
+        const existingRSVP = await RSVP.findOne({ user, event });
+        if (existingRSVP) {
+            return res.status(400).json({ message: 'You have already RSVPed for this event' });
+        }
 
-        const newRSVP = new RSVP({
-            user: user,
-            event: event,
-        });
+        // Check if there are available seats
+        if (eventObj.available_seats <= 0) {
+            return res.status(400).json({ message: 'No available seats for this event' });
+        }
 
-        const savedRSVP = await newRSVP.save();
-        res.status(201).json(savedRSVP);
+        // Create a new RSVP
+        const newRSVP = new RSVP({ user, event });
+        await newRSVP.save();
+
+        // Update event: Add user to attendees and let the pre-save hook adjust available seats
+        eventObj.attendees.push(user);
+        await eventObj.save();
+
+        res.status(201).json(newRSVP);
     } catch (error) {
         res.status(500).json({ message: error.message });
     }
