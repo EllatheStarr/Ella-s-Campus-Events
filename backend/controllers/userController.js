@@ -135,7 +135,11 @@ exports.updateProfile = async (req, res) => {
 // Delete user account
 exports.deleteAccount = async (req, res) => {
     try {
-        const user = await User.findByIdAndDelete(req.user.id);
+        console.log('Request User:', req.user);
+console.log('Request User ID:', req.user?.id);
+
+        const user = await User.findByIdAndDelete(req.params.id);
+        
         if (!user) {
             return res.status(404).json({ message: 'User not found' });
         }

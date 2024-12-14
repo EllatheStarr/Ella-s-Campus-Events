@@ -26,7 +26,6 @@ document.addEventListener('DOMContentLoaded', async () => {
             <td>${user.name}</td>
             <td>${user.email}</td>
             <td>
-              <button class="btn view-btn" data-id="${user._id}">View</button>
               <button class="btn delete-btn" data-id="${user._id}">Delete</button>
             </td>
           `;
@@ -53,8 +52,8 @@ document.addEventListener('DOMContentLoaded', async () => {
               throw new Error('Failed to delete user');
             }
   
-            // Reload the page after successful deletion
-            location.reload();  // Reloads the page to reflect the changes
+          
+            location.reload();  
           } catch (error) {
             console.error('Error deleting user:', error);
             alert('Failed to delete the user. Please try again later.');
