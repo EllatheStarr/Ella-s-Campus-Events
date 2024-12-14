@@ -13,14 +13,14 @@
             <span class="title">Ella's Events</span>
         </div>
         <nav class="navbar">
-            <!-- Other navbar items can go here -->
+
         </nav>
     </header>
 
     <main>
         <section class="auth-form">
             <h2>Sign Up</h2>
-            <form id="registerForm" onsubmit="event.preventDefault(); registerUser()">
+            <form id="registerForm">
                 <label for="name">Full Name</label>
                 <input type="text" id="name" name="name" required>
 
@@ -32,25 +32,17 @@
 
                 <fieldset>
                     <legend>Event Preferences</legend>
-                    <div class="checkbox-group">
-                        <label><input type="checkbox" name="preferences" value="workshops"> Workshops</label>
-                        <label><input type="checkbox" name="preferences" value="seminars"> Seminars</label>
-                        <label><input type="checkbox" name="preferences" value="club_activities"> Club Activities</label>
-                        <label><input type="checkbox" name="preferences" value="cultural_events"> Cultural Events</label>
-                        <label><input type="checkbox" name="preferences" value="webinars"> Webinars</label>
-                        <label><input type="checkbox" name="preferences" value="conferences"> Conferences</label>
-                        <label><input type="checkbox" name="preferences" value="parties"> Parties</label>
-                        <label><input type="checkbox" name="preferences" value="sports"> Sports</label>
+                    <div class="checkbox-group" id="preferencesContainer">
                     </div>
                 </fieldset>
 
-                <button type="submit">Register</button>
+                <button type="button" onclick="registerUser()">Register</button>
                 <p>Already have an account? <a href="login.html">Log In</a></p>
             </form>
         </section>
     </main>
 
-    <script src="../../scripts/auth.js"></script>
+    <script src="../../scripts/register.js"></script>
     <script src="../../scripts/darkMode.js"></script>
 </body>
 </html>

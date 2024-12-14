@@ -13,83 +13,15 @@
   </header>
 
   <main>
-    <form id="preferences-form" onsubmit="event.preventDefault(); savePreferences()">
+    <form id="preferences-form">
       <fieldset>
         <legend>Select Your Preferences</legend>
-
-        <label>
-          <input type="checkbox" id="workshops" name="preferences" value="workshops">
-          Workshops
-        </label>
-
-        <label>
-          <input type="checkbox" id="seminars" name="preferences" value="seminars">
-          Seminars
-        </label>
-
-        <label>
-          <input type="checkbox" id="club_activities" name="preferences" value="club_activities">
-          Club Activities
-        </label>
-
-        <label>
-          <input type="checkbox" id="cultural_events" name="preferences" value="cultural_events">
-          Cultural Events
-        </label>
-
-        <label>
-          <input type="checkbox" id="webinars" name="preferences" value="webinars">
-          Webinars
-        </label>
-
-        <label>
-          <input type="checkbox" id="conferences" name="preferences" value="conferences">
-          Conferences
-        </label>
-
-        <label>
-          <input type="checkbox" id="parties" name="preferences" value="parties">
-          Parties
-        </label>
-
-        <label>
-          <input type="checkbox" id="sports" name="preferences" value="sports">
-          Sports
-        </label>
+        <div id="preferences-container"></div> <!-- This will be populated dynamically -->
       </fieldset>
-
-      <button type="submit">Save Preferences</button>
+      <button type="button" id="save-preferences-btn">Save Preferences</button>
     </form>
   </main>
 
-
-  <script>
-    // Load existing preferences
-    function loadPreferences() {
-      const savedPreferences = ["workshops", "seminars", "sports"]; // Example from database
-      const checkboxes = document.querySelectorAll('input[name="preferences"]');
-      
-      checkboxes.forEach(checkbox => {
-        if (savedPreferences.includes(checkbox.value)) {
-          checkbox.checked = true;
-        }
-      });
-    }
-
-    // Save updated preferences
-    function savePreferences() {
-      const selectedPreferences = Array.from(
-        document.querySelectorAll('input[name="preferences"]:checked')
-      ).map(input => input.value);
-
-      console.log("Preferences Saved:", selectedPreferences);
-      alert("Your preferences have been updated!");
-      
-      // Add a real API call or database update logic here
-    }
-
-    // Load preferences on page load
-    window.onload = loadPreferences;
-  </script>
+  <script src="../../scripts/preferences.js"></script>
 </body>
 </html>
