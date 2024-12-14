@@ -1,117 +1,148 @@
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f9;
-    color: #333;
-  }
-  
-  /* Header */
-  header {
-    background-color: #1abc9c;
-    color: white;
-    padding: 1rem;
-    text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-  }
-  
-  header h1 {
-    margin: 0;
-  }
-  
-  header a {
-    display: inline-block;
-    margin-top: 0.5rem;
-    color: white;
-    text-decoration: none;
-    font-size: 0.9rem;
-    background-color: #16a085;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-  }
-  
-  header a:hover {
-    background-color: #0e7c68;
-  }
-  
-  /* Form Styles */
-  form {
-    max-width: 600px;
-    margin: 2rem auto;
-    padding: 2rem;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  form label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: bold;
-  }
-  
-  form input, form textarea, form button {
-    width: 100%;
-    padding: 0.8rem;
-    margin-bottom: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  form textarea {
-    resize: none;
-  }
-  
-  form button {
-    background-color: #1abc9c;
-    color: white;
-    font-size: 1rem;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  form button:hover {
-    background-color: #16a085;
-  }
-  /* Style for the form and dropdown */
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  color: #333;
 }
 
-label {
+/* Header */
+header {
+  background-color: #1abc9c;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+  background-color: #16a085;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+header a:hover {
+  background-color: #0e7c68;
+}
+
+header button {
+  background-color: #1abc9c;
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+header button:hover {
+  background-color: #16a085;
+}
+
+/* Form Styles */
+form {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.5rem;
   font-weight: bold;
 }
 
-input, textarea, select {
+form input, form textarea, form select, form button {
   width: 100%;
-  padding: 0.5em;
-  margin-top: 0.3em;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
 
-select {
-  appearance: none;
-  background: #fff;
+form textarea {
+  resize: none;
 }
 
-button {
-  background-color: #007bff;
+form button {
+  background-color: #1abc9c;
   color: white;
-  padding: 0.7em 1.5em;
+  font-size: 1rem;
   border: none;
-  border-radius: 5px;
   cursor: pointer;
-  font-size: 1em;
+  transition: background-color 0.3s ease;
 }
 
-button:hover {
-  background-color: #0056b3;
+form button:hover {
+  background-color: #16a085;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body.dark-mode header {
+  background-color: #333;
+  color: #ffffff;
+}
+
+body.dark-mode header a {
+  background-color: #16a085;
+  color: #ffffff;
+}
+
+body.dark-mode header a:hover {
+  background-color: #0e7c68;
+}
+
+body.dark-mode header button {
+  background-color: #ecf0f1;
+  color: #333;
+}
+
+body.dark-mode header button:hover {
+  background-color: #bdc3c7;
+}
+
+body.dark-mode form {
+  background-color: #2c2c2c;
+  color: #ffffff;
+  border: 1px solid #444;
+}
+
+body.dark-mode form label {
+  color: #ffffff;
+}
+
+body.dark-mode form input, body.dark-mode form textarea, body.dark-mode form select {
+  background-color: #444;
+  color: #ffffff;
+  border: 1px solid #555;
+}
+
+body.dark-mode form button {
+  background-color: #03dac6;
+  color: #1e1e1e;
+}
+
+body.dark-mode form button:hover {
+  background-color: #018786;
 }

@@ -7,7 +7,7 @@ body {
     background-color: #121212;
     color: #ffffff;
     line-height: 1.6;
-    transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.3s, color 0.3s, background-image 0.3s;
     background-image: url('../assets/image.png');
     background-size: cover; /* Ensures the image covers the entire body */
     background-position: center center; /* Keeps the center of the image focused */

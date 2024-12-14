@@ -8,29 +8,27 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="logo-section">
-          <img src="../../assets/logo.png" alt="Ella's Events Logo" class="logo">
-          <span class="title">Ella's Events</span>
-        </div>
-        <ul class="nav-links">
-            <li><a href="AdminDashboard.html">Home</a></li>
-          <li><a href="CreateEvent.html">Create Event</a></li>
-          <li><a href="calendar.html">Calendar View</a></li>
-          <li><a href="view-users.html">View Users</a></li>
-        </ul>
-        <button id="toggle-dark-mode" title="Toggle Dark Mode"><i class="fas fa-moon"></i></button>
-      </nav>
+  <nav class="navbar">
+    <div class="logo-section">
+      <img src="../../assets/logo.png" alt="Ella's Events Logo" class="logo">
+      <span class="title">Ella's Events</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="AdminDashboard.html">Home</a></li>
+      <li><a href="CreateEvent.html">Create Event</a></li>
+      <li><a href="calendar.html">Calendar View</a></li>
+      <li><a href="view-users.html">View Users</a></li>
+    </ul>
+    <button id="toggle-dark-mode" title="Toggle Dark Mode"><i class="fas fa-moon"></i></button>
+  </nav>
   <main>
     <h1>Manage Events</h1>
     <div class="event-list" id="event-list">
-      </div>
-      
-      <!-- Repeat event-card for other events -->
+      <!-- Event cards will be dynamically added here -->
     </div>
   </main>
 
-  <script src="/scripts/darkMode.js"></script>
+  <script src="../../scripts/darkMode.js"></script>
   <script src="../../scripts/manage-events.js"></script>
 </body>
 </html>

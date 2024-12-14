@@ -5,11 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Create Event</title>
   <link rel="stylesheet" href="../../styles/create-events.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
   <header>
     <h1>Create Event</h1>
     <a href="AdminDashboard.html">Back to Dashboard</a>
+    <button id="toggle-dark-mode" title="Toggle Dark Mode"><i class="fas fa-moon"></i></button>
   </header>
   <form id="event-form">
     <label for="event-name">Event Name</label>
@@ -33,10 +35,17 @@
     <!-- New Category Selection -->
     <label for="event-category">Category</label>
     <select id="event-category" required>
+      <option value="" disabled selected>Select category</option>
+      <option value="conference">Conference</option>
+      <option value="workshop">Workshop</option>
+      <option value="seminar">Seminar</option>
+      <option value="webinar">Webinar</option>
+      <option value="social">Social</option>
     </select>
 
     <button type="button"><i class="fas fa-check-circle"></i> Create Event</button>
   </form>
+  <script src="../../scripts/darkMode.js"></script>
   <script src="../../scripts/createEvent.js"></script>
 </body>
 </html>

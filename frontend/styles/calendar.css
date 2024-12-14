@@ -5,79 +5,94 @@ body {
     padding: 0;
     background-color: #f4f4f9;
     color: #333;
-  }
-  
-  .navbar {
+}
+
+.navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: #2c3e50;
     padding: 1rem 2rem;
     color: white;
-  }
-  
-  .navbar .logo {
+}
+
+.navbar .logo {
     height: 40px;
     margin-right: 10px;
-  }
-  
-  .navbar .title {
+}
+
+.navbar .title {
     font-size: 1.2rem;
     font-weight: bold;
-  }
-  
-  .navbar ul {
+}
+
+.navbar ul {
     list-style: none;
     display: flex;
     gap: 1.5rem;
-  }
-  
-  .navbar ul li a {
+}
+
+.navbar ul li a {
     color: white;
     text-decoration: none;
     font-size: 0.9rem;
-  }
-  
+}
 
-  /* calendar.css */
+/* Dark Mode Toggle Button */
+.navbar button {
+    background-color: #1abc9c;
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.navbar button:hover {
+    background-color: #16a085;
+}
+
+/* calendar.css */
 #calendar {
     max-width: 900px;
     margin: 0 auto;
     padding: 20px;
-  }
-  
-  .fc-daygrid-day {
+}
+
+.fc-daygrid-day {
     background-color: #f4f4f9;
-  }
-  
-  .fc-daygrid-day:hover {
+}
+
+.fc-daygrid-day:hover {
     background-color: #e0e0e0;
-  }
-  
-  .fc-toolbar {
+}
+
+.fc-toolbar {
     text-align: center;
     font-size: 18px;
     margin-bottom: 20px;
-  }
-  
-  .fc .fc-toolbar-title {
+}
+
+.fc .fc-toolbar-title {
     font-size: 20px;
     font-weight: bold;
-  }
-  .rsvp-btn {
+}
+
+.rsvp-btn {
     padding: 5px 10px;
     background-color: #4CAF50;
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-  }
-  
-  .rsvp-btn:hover {
-    background-color: #45a049;
-  }
+}
 
-  /* Updated Styles for the Calendar */
+.rsvp-btn:hover {
+    background-color: #45a049;
+}
+
+/* Updated Styles for the Calendar */
 .calendar-container {
     max-width: 600px;
     margin: 20px auto;
@@ -86,53 +101,52 @@ body {
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .calendar {
+}
+
+.calendar {
     padding: 20px;
-  }
-  
-  .month {
+}
+
+.month {
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-size: 1.2rem;
     margin-bottom: 10px;
-  }
-  
-  .weekdays, .days {
+}
+
+.weekdays, .days {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     gap: 5px;
-  }
-  
-  .weekdays div, .days div {
+}
+
+.weekdays div, .days div {
     text-align: center;
     padding: 10px;
     font-size: 0.9rem;
-  }
-  
-  .weekdays div {
+}
+
+.weekdays div {
     font-weight: bold;
-  }
-  
-  .days .day {
+}
+
+.days .day {
     background-color: #f4f4f9;
     border-radius: 4px;
     cursor: pointer;
-  }
-  
-  .days .day:hover {
+}
+
+.days .day:hover {
     background-color: #e0e0e0;
-  }
-  
-  .day.selected {
+}
+
+.day.selected {
     background-color: #1abc9c;
     color: white;
-  }
-  
+}
 
-  .events-table {
+.events-table {
     width: 100%;
     border-collapse: collapse;
     margin: 20px 0;
@@ -141,60 +155,110 @@ body {
     background-color: white;
     border-radius: 10px;
     overflow: hidden;
-  }
-  
-  .events-table th,
-  .events-table td {
+}
+
+.events-table th,
+.events-table td {
     padding: 15px;
     border: 1px solid #ddd;
-  }
-  
-  .events-table th {
+}
+
+.events-table th {
     background-color: #2c3e50;
     color: white;
     font-weight: bold;
-  }
-  
-  .events-table tr:nth-child(even) {
+}
+
+.events-table tr:nth-child(even) {
     background-color: #f2f2f2;
-  }
-  
-  .events-table tr:hover {
+}
+
+.events-table tr:hover {
     background-color: #ddd;
-  }
-  
-  .btn {
+}
+
+.btn {
     text-decoration: none;
     color: white;
     background-color: #007BFF;
     padding: 5px 10px;
     border-radius: 5px;
-  }
-  
-  .btn:hover {
+}
+
+.btn:hover {
     background-color: #0056b3;
-  }
-  /* Style for days with events */
+}
+
+/* Style for days with events */
 .day.has-events {
-  position: relative; /* To position the dot marker */
-  background-color: #f4f4f9; /* Matches the general day background */
-  color: #333;
-  cursor: pointer;
-  border-radius: 4px; /* Matches the general day styles */
+    position: relative; /* To position the dot marker */
+    background-color: #f4f4f9; /* Matches the general day background */
+    color: #333;
+    cursor: pointer;
+    border-radius: 4px; /* Matches the general day styles */
 }
 
 .day.has-events:hover {
-  background-color: #e0e0e0; /* Matches hover effect of days */
+    background-color: #e0e0e0; /* Matches hover effect of days */
 }
 
 /* Dot marker for days with events */
 .day.has-events .event-marker {
-  position: absolute;
-  bottom: 5px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 6px;
-  height: 6px;
-  background-color: #1abc9c; /* Marker color matching theme */
-  border-radius: 50%;
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 6px;
+    height: 6px;
+    background-color: #1abc9c; /* Marker color matching theme */
+    border-radius: 50%;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-mode .navbar {
+    background-color: #333;
+}
+
+body.dark-mode .navbar button {
+    background-color: #ecf0f1;
+    color: #333;
+}
+
+body.dark-mode .nav-links li a {
+    color: #ecf0f1;
+}
+
+body.dark-mode .nav-links li a:hover {
+    color: #1abc9c;
+}
+
+body.dark-mode .calendar-container {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+body.dark-mode .calendar .days .day {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+body.dark-mode .calendar .days .day:hover {
+    background-color: #333;
+}
+
+body.dark-mode .events-table th {
+    background-color: #333;
+}
+
+body.dark-mode .events-table td {
+    background-color: #1e1e1e;
+}
+
+body.dark-mode .events-table tr:hover {
+    background-color: #333;
 }

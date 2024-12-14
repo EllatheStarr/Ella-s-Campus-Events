@@ -121,3 +121,70 @@ main h1 {
 .delete-btn:hover {
   background-color: #c0392b;
 }
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body.dark-mode .navbar {
+  background-color: #333;
+}
+
+body.dark-mode .navbar .title {
+  color: #ffffff;
+}
+
+body.dark-mode .navbar ul li a {
+  color: #ffffff;
+}
+
+body.dark-mode .navbar ul li a:hover {
+  background-color: #16a085;
+}
+
+body.dark-mode #toggle-dark-mode {
+  color: #ffffff;
+}
+
+body.dark-mode main {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body.dark-mode .user-table {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+body.dark-mode .user-table th {
+  background-color: #333;
+  color: #ffffff;
+}
+
+body.dark-mode .user-table td {
+  border-bottom: 1px solid #444;
+}
+
+body.dark-mode .user-table tbody tr:hover {
+  background-color: #333;
+}
+
+body.dark-mode .view-btn {
+  background-color: #3498db;
+  color: #ffffff;
+}
+
+body.dark-mode .view-btn:hover {
+  background-color: #2980b9;
+}
+
+body.dark-mode .delete-btn {
+  background-color: #e74c3c;
+  color: #ffffff;
+}
+
+body.dark-mode .delete-btn:hover {
+  background-color: #c0392b;
+}
