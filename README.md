@@ -26,7 +26,7 @@ For easy access during testing, use the following credentials:
 ### Test User Credentials
 | Role | Username         | Password  |
 |------|------------------|-----------|
-| User | j.avril.com      | june1234  |
+| User | j.avril@gmail.com      | june1234  |
 
 ### Test Admin Credentials
 | Role | Username         | Password  |
