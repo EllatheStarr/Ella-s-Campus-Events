@@ -16,7 +16,7 @@ Ella's Events is a campus event management system designed to streamline the pro
 ---
 
 ## Deployment
-**Live Application Link**: [Ella's Events](#) (Insert link to deployed application on Render, Vercel, or GitHub Pages)
+**Live Application Link**: [Ella's Events](https://ella-s-campus-events.onrender.com) 
 
 ---
 
