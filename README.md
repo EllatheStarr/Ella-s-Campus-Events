@@ -156,31 +156,6 @@ Follow these steps to run the project locally:
 
 ---
 
-## Installation Instructions
-
-### Clone the Repository:
-```bash
-git clone https://github.com/username/ellas-events.git
-```
-
-### Navigate to the Project Directory:
-```bash
-cd ellas-events
-```
-
-### Install Dependencies:
-For Backend:
-```bash
-npm install
-```
-
-For Frontend:
-```bash
-npm install
-```
-
----
-
 ## API Testing
 Postman screenshots can be found in the `backend` folder under `API screenshots`.
 
