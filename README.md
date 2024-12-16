@@ -133,6 +133,90 @@ Follow these steps to run the project locally:
 
 ---
 
+Here is the full **API Testing Screenshots** section written in Markdown format, with inline references to your images.
+
+---
+
+# API Testing Screenshots
+
+## Categories  
+Endpoints for managing event categories.
+
+- **Create a New Category**  
+  ![Create a New Category](./backend/API%20Screenshots/Categories/Create%20a%20new%20category.png)
+
+- **Delete a Category**  
+  ![Delete a Category](./backend/API%20Screenshots/Categories/Delete%20a%20category.png)
+
+- **Get a Single Category by ID**  
+  ![Get a Single Category](./backend/API%20Screenshots/Categories/Get%20a%20single%20category%20by%20id.png)
+
+- **Get All Categories**  
+  ![Get All Categories](./backend/API%20Screenshots/Categories/Get%20all%20categories.png)
+
+- **Update an Existing Category**  
+  ![Update a Category](./backend/API%20Screenshots/Categories/Update%20an%20existing%20category.png)
+
+---
+
+## Events  
+Endpoints for creating, retrieving, updating, and deleting events.
+
+- **Create a New Event**  
+  ![Create New Event](./backend/API%20Screenshots/Events/Create%20New%20Event.png)
+
+- **Delete an Event**  
+  ![Delete an Event](./backend/API%20Screenshots/Events/Delete%20an%20event.png)
+
+- **Get a Single Event by ID**  
+  ![Get a Single Event](./backend/API%20Screenshots/Events/Get%20a%20single%20event%20by%20id.png)
+
+- **Get All Events**  
+  ![Get All Events](./backend/API%20Screenshots/Events/Get%20all%20events.png)  
+  ![Get All Events 2](./backend/API%20Screenshots/Events/Get%20all%20events%202.png)  
+  ![Get All Events 3](./backend/API%20Screenshots/Events/Get%20all%20events%203.png)
+
+- **Update an Event**  
+  ![Update an Event](./backend/API%20Screenshots/Events/Update%20an%20event.png)
+
+---
+
+## RSVP Management  
+Endpoints for managing RSVPs to events.
+
+- **Delete an RSVP**  
+  ![Delete an RSVP](./backend/API%20Screenshots/RSVP'S/Delete%20an%20RSVP.png)
+
+- **Get a Single RSVP by ID**  
+  ![Get a Single RSVP](./backend/API%20Screenshots/RSVP'S/Get%20a%20single%20rsvp%20by%20id.png)
+
+- **Get All RSVPs**  
+  ![Get All RSVPs](./backend/API%20Screenshots/RSVP'S/Get%20all%20rsvps.png)  
+  ![Get All RSVPs 2](./backend/API%20Screenshots/RSVP'S/Get%20all%20rsvps%202.png)
+
+---
+
+## User Management  
+Endpoints for managing user accounts.
+
+- **Get All Users**  
+  ![Get All Users](./backend/API%20Screenshots/Users/Get%20all%20users.png)  
+  ![Get All Users 2](./backend/API%20Screenshots/Users/Get%20all%20users%202.png)
+
+- **Register a New User**  
+  ![Register a New User](./backend/API%20Screenshots/Users/Register%20a%20new%20user.png)
+
+- **Login a User**  
+  ![Login a User](./backend/API%20Screenshots/Users/Login%20a%20user.png)
+
+- **Logout a User**  
+  ![Logout a User](./backend/API%20Screenshots/Users/Logout%20a%20user.png)
+
+- **Update User Profile**  
+  ![Update User Profile](./backend/API%20Screenshots/Users/Update%20user%20profile.png)
+
+---
+
 ## Core Functionalities
 
 1. **User Authentication**
