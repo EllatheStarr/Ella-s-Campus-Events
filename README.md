@@ -1,5 +1,28 @@
 # Ella's Events
 
+
+## Table of Contents  
+1. [Overview](#overview)  
+2. [Key Features](#key-features)  
+3. [Deployment](#deployment)  
+4. [Login Details](#login-details)  
+   - [Test User Credentials](#test-user-credentials)  
+   - [Test Admin Credentials](#test-admin-credentials)  
+5. [Feature Checklist](#feature-checklist)  
+6. [Installation Instructions](#installation-instructions)  
+7. [API Documentation](#api-documentation)  
+   - [User Authentication & Account Management](#user-authentication--account-management)  
+   - [Event Management](#event-management)  
+   - [RSVP Management](#rsvp-management)  
+   - [Category Management (Admin)](#category-management-admin)  
+8. [API Testing Screenshots](#api-testing-screenshots)  
+   - [Categories](#categories)  
+   - [Events](#events)  
+   - [RSVP Management](#rsvp-management-1)  
+   - [User Management](#user-management)  
+
+   ---
+   
 ## Overview
 Ella's Events is a campus event management system designed to streamline the process of event creation, registration, and participation. The system caters to students and staff, providing features like personalized event recommendations, RSVP tracking, and a detailed calendar view.
 
